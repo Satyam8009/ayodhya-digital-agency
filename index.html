@@ -3,82 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shree Ram Guest House - Ayodhya | Budget Stay</title>
+    <title>Sigmacare | Dry Clean & Car Wash Ayodhya</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .primary-blue { background-color: #0f172a; }
+        .accent-blue { color: #38bdf8; }
+        .gradient-bg { background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%); }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-slate-50 font-sans">
 
-    <nav class="fixed w-full z-50 bg-orange-600 shadow-xl p-3 text-white">
-        <div class="max-w-7xl mx-auto flex justify-between items-center px-4">
-            <h1 class="text-xl font-bold flex items-center">
-                <i class="fas fa-place-of-worship mr-2"></i> Shree Ram Guest House
-            </h1>
-            <a href="tel:YOURNUMBER" class="bg-white text-orange-600 px-4 py-1 rounded-full font-bold text-sm">Call Now</a>
-        </div>
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm p-4 flex justify-between items-center px-6">
+        <h1 class="text-2xl font-bold text-blue-700">Sigmacare</h1>
+        <button onclick="document.getElementById('booking').scrollIntoView()" class="bg-blue-600 text-white px-5 py-2 rounded-full font-bold text-sm shadow-md">Get Started</button>
     </nav>
 
-    <section class="pt-24 pb-12 px-6 bg-orange-500 text-white text-center">
-        <h2 class="text-3xl md:text-5xl font-bold mb-4">Ayodhya Mein Sasta aur Achha Niwas</h2>
-        <p class="text-lg opacity-90 mb-6">Ram Janmabhoomi ke bilkul kareeb, yatriyon ki pehli pasand.</p>
-        <div class="bg-white/20 p-4 rounded-2xl inline-block backdrop-blur-md border border-white/30">
-            <p class="text-sm">Starting at only <span class="text-2xl font-bold">₹999/-</span></p>
+    <section class="pt-28 pb-16 px-6 text-center gradient-bg text-white">
+        <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Quality & Efficiency <br>for your Laundry</h2>
+        <p class="opacity-90 mb-8 max-w-lg mx-auto">Ayodhya ki No.1 Dry Cleaning aur Car Wash service. Ab sab kuch ek hi app par.</p>
+        <img src="https://img.freepik.com/free-vector/washing-machine-concept-illustration_114360-1456.jpg" class="w-48 mx-auto rounded-full mb-6 bg-white p-2">
+    </section>
+
+    <section class="py-12 px-6 max-w-6xl mx-auto">
+        <h3 class="text-2xl font-bold text-center mb-8">Choose Your Service</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <button onclick="selectService('Dry Cleaning')" class="bg-white p-6 rounded-2xl shadow-lg border-2 border-transparent hover:border-blue-500 transition text-center">
+                <i class="fas fa-tshirt text-3xl text-blue-500 mb-2"></i>
+                <p class="font-bold">Dry Clean</p>
+            </button>
+            <button onclick="selectService('Car Wash')" class="bg-white p-6 rounded-2xl shadow-lg border-2 border-transparent hover:border-blue-500 transition text-center">
+                <i class="fas fa-car text-3xl text-blue-500 mb-2"></i>
+                <p class="font-bold">Car Wash</p>
+            </button>
+            <button onclick="selectService('Ironing')" class="bg-white p-6 rounded-2xl shadow-lg border-2 border-transparent hover:border-blue-500 transition text-center">
+                <i class="fas fa-hot-tub text-3xl text-blue-500 mb-2"></i>
+                <p class="font-bold">Ironing</p>
+            </button>
+            <button onclick="selectService('Shoe Cleaning')" class="bg-white p-6 rounded-2xl shadow-lg border-2 border-transparent hover:border-blue-500 transition text-center">
+                <i class="fas fa-shoe-prints text-3xl text-blue-500 mb-2"></i>
+                <p class="font-bold">Shoes</p>
+            </button>
         </div>
     </section>
 
-    <section class="py-10 px-6 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
-        <div class="bg-white p-4 rounded-xl shadow-sm border border-orange-100 text-center">
-            <i class="fas fa-walking text-orange-500 text-2xl mb-2"></i>
-            <p class="text-xs font-bold uppercase">Mandir Distance</p>
-            <p class="text-sm">500 Meters</p>
-        </div>
-        <div class="bg-white p-4 rounded-xl shadow-sm border border-orange-100 text-center">
-            <i class="fas fa-wifi text-orange-500 text-2xl mb-2"></i>
-            <p class="text-xs font-bold uppercase">Free Wi-Fi</p>
-            <p class="text-sm">High Speed</p>
-        </div>
-        <div class="bg-white p-4 rounded-xl shadow-sm border border-orange-100 text-center">
-            <i class="fas fa-check-circle text-orange-500 text-2xl mb-2"></i>
-            <p class="text-xs font-bold uppercase">Cleanliness</p>
-            <p class="text-sm">100% Hygenic</p>
-        </div>
-        <div class="bg-white p-4 rounded-xl shadow-sm border border-orange-100 text-center">
-            <i class="fas fa-clock text-orange-500 text-2xl mb-2"></i>
-            <p class="text-xs font-bold uppercase">Check-in</p>
-            <p class="text-sm">24 Hours</p>
+    <section id="booking" class="py-12 px-6 bg-blue-50">
+        <div class="max-w-md mx-auto bg-white p-8 rounded-3xl shadow-2xl">
+            <h3 class="text-2xl font-bold mb-6 text-blue-800"><i class="fas fa-calendar-alt mr-2"></i>Schedule Pickup</h3>
+            <div class="space-y-4">
+                <input type="text" id="custName" placeholder="Aapka Naam" class="w-full p-4 border rounded-2xl outline-blue-500 bg-slate-50">
+                <div class="flex gap-2">
+                    <input type="date" id="pickupDate" class="w-1/2 p-4 border rounded-2xl outline-blue-500 bg-slate-50">
+                    <select id="deliveryType" class="w-1/2 p-4 border rounded-2xl outline-blue-500 bg-slate-50">
+                        <option>Regular Delivery</option>
+                        <option>Express Delivery</option>
+                    </select>
+                </div>
+                <textarea id="address" placeholder="Address (Ghar ya Hotel name)..." class="w-full p-4 border rounded-2xl outline-blue-500 bg-slate-50 h-24"></textarea>
+                
+                <div id="serviceStatus" class="bg-blue-100 p-3 rounded-xl text-blue-700 text-sm font-bold text-center hidden">
+                    Selected: <span id="selectedServiceName">None</span>
+                </div>
+
+                <button onclick="confirmOrder()" class="w-full bg-blue-600 text-white py-4 rounded-2xl font-bold text-lg shadow-lg hover:bg-blue-700">
+                    Confirm Pickup
+                </button>
+            </div>
         </div>
     </section>
 
-    <section class="py-12 px-6 max-w-4xl mx-auto">
-        <h3 class="text-2xl font-bold text-center mb-8">Hume Kyun Chunein?</h3>
-        <ul class="space-y-4">
-            <li class="flex items-start bg-white p-4 rounded-lg shadow-sm">
-                <i class="fas fa-star text-yellow-500 mt-1 mr-3"></i>
-                <span>Ghar jaisa mahol aur surakshit vatavaran.</span>
-            </li>
-            <li class="flex items-start bg-white p-4 rounded-lg shadow-sm">
-                <i class="fas fa-star text-yellow-500 mt-1 mr-3"></i>
-                <span>Parivaar (Families) ke liye bade aur saaf kamre.</span>
-            </li>
-            <li class="flex items-start bg-white p-4 rounded-lg shadow-sm">
-                <i class="fas fa-star text-yellow-500 mt-1 mr-3"></i>
-                <span>Station aur Bus Stand se asaan pahunch.</span>
-            </li>
-        </ul>
-    </section>
-
-    <footer class="bg-gray-900 text-white py-12 px-6 text-center">
-        <h4 class="text-xl font-bold mb-4">Aaj hi apni jagah surakshit karein!</h4>
-        <div class="flex flex-col gap-4 max-w-xs mx-auto">
-            <a href="https://wa.me/91YOURNUMBER" class="bg-green-600 p-3 rounded-lg font-bold flex items-center justify-center">
-                <i class="fab fa-whatsapp mr-2"></i> WhatsApp Booking
-            </a>
-            <a href="tel:YOURNUMBER" class="bg-orange-600 p-3 rounded-lg font-bold flex items-center justify-center">
-                <i class="fas fa-phone-alt mr-2"></i> Call Manager
-            </a>
-        </div>
-        <p class="mt-10 text-xs text-gray-500">© 2026 Shree Ram Guest House Ayodhya | Digital Partner: Ayodhya Digital Labs</p>
+    <footer class="py-10 text-center text-gray-400 text-sm">
+        <p>© 2026 Sigmacare Ayodhya | Phase 1 Web App</p>
+        <p class="mt-2">Built with MERN Stack Expertise</p>
     </footer>
 
+    <script>
+        let selectedService = "Dry Cleaning";
+
+        function selectService(name) {
+            selectedService = name;
+            document.getElementById('serviceStatus').classList.remove('hidden');
+            document.getElementById('selectedServiceName').innerText = name;
+            document.getElementById('booking').scrollIntoView({behavior: 'smooth'});
+        }
+
+        function confirmOrder() {
+            const name = document.getElementById('custName').value;
+            const date = document.getElementById('pickupDate').value;
+            const address = document.getElementById('address').value;
+            const type = document.getElementById('deliveryType').value;
+            const myNumber = "91YOURNUMBER"; // <-- Apna number yahan dalo
+
+            if(!name || !address || !date) {
+                alert("Bhai, saari details bharo tabhi toh pickup boy aayega!");
+                return;
+            }
+
+            const msg = `*Naya Order (Sigmacare)*%0A%0A*Service:* ${selectedService}%0A*Naam:* ${name}%0A*Date:* ${date}%0A*Type:* ${type}%0A*Address:* ${address}%0A%0A_Kripya pickup agent assign karein._`;
+            window.open(`https://wa.me/${myNumber}?text=${msg}`, '_blank');
+        }
+    </script>
 </body>
 </html>

@@ -3,82 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shree Ram Guest House - Ayodhya | Budget Stay</title>
+    <title>Shree Ram Guest House | Ayodhya Dham</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap');
+        body { font-family: 'Mukta', sans-serif; }
+        .saffron-btn { background: linear-gradient(90deg, #ff8c00, #ff4500); }
+        .modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-orange-50 text-gray-900">
 
-    <nav class="fixed w-full z-50 bg-orange-600 shadow-xl p-3 text-white">
-        <div class="max-w-7xl mx-auto flex justify-between items-center px-4">
-            <h1 class="text-xl font-bold flex items-center">
-                <i class="fas fa-place-of-worship mr-2"></i> Shree Ram Guest House
-            </h1>
-            <a href="tel:YOURNUMBER" class="bg-white text-orange-600 px-4 py-1 rounded-full font-bold text-sm">Call Now</a>
-        </div>
+    <nav class="fixed w-full z-50 bg-white shadow-md p-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-orange-600"><i class="fas fa-om"></i> Shree Ram</h1>
+        <button onclick="openModal()" class="saffron-btn text-white px-6 py-2 rounded-full font-bold shadow-lg">Book Now</button>
     </nav>
 
-    <section class="pt-24 pb-12 px-6 bg-orange-500 text-white text-center">
-        <h2 class="text-3xl md:text-5xl font-bold mb-4">Ayodhya Mein Sasta aur Achha Niwas</h2>
-        <p class="text-lg opacity-90 mb-6">Ram Janmabhoomi ke bilkul kareeb, yatriyon ki pehli pasand.</p>
-        <div class="bg-white/20 p-4 rounded-2xl inline-block backdrop-blur-md border border-white/30">
-            <p class="text-sm">Starting at only <span class="text-2xl font-bold">₹999/-</span></p>
+    <section class="relative h-[60vh] flex items-center justify-center text-white pt-16">
+        <img src="https://images.unsplash.com/photo-1707153673551-34676527582c?q=80&w=1500&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover" alt="Ayodhya">
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="relative z-10 text-center px-4">
+            <h2 class="text-4xl md:text-6xl font-extrabold mb-2">Shree Ram Guest House</h2>
+            <p class="text-xl opacity-90">Ram Mandir se matra 500m ki doori par</p>
         </div>
     </section>
 
-    <section class="py-10 px-6 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
-        <div class="bg-white p-4 rounded-xl shadow-sm border border-orange-100 text-center">
-            <i class="fas fa-walking text-orange-500 text-2xl mb-2"></i>
-            <p class="text-xs font-bold uppercase">Mandir Distance</p>
-            <p class="text-sm">500 Meters</p>
+    <section class="py-12 px-6 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-2xl shadow-md text-center border-t-4 border-orange-500">
+            <i class="fas fa-walking text-3xl text-orange-500 mb-3"></i>
+            <h3 class="font-bold text-xl">Sabse Kareeb</h3>
+            <p class="text-gray-600">Mandir darshan ke liye sabse nazdeek stay.</p>
         </div>
-        <div class="bg-white p-4 rounded-xl shadow-sm border border-orange-100 text-center">
-            <i class="fas fa-wifi text-orange-500 text-2xl mb-2"></i>
-            <p class="text-xs font-bold uppercase">Free Wi-Fi</p>
-            <p class="text-sm">High Speed</p>
+        <div class="bg-white p-6 rounded-2xl shadow-md text-center border-t-4 border-orange-500">
+            <i class="fas fa-rupee-sign text-3xl text-orange-500 mb-3"></i>
+            <h3 class="font-bold text-xl">Sasta aur Achha</h3>
+            <p class="text-gray-600">Behtarin suvidhayein aapke budget mein.</p>
         </div>
-        <div class="bg-white p-4 rounded-xl shadow-sm border border-orange-100 text-center">
-            <i class="fas fa-check-circle text-orange-500 text-2xl mb-2"></i>
-            <p class="text-xs font-bold uppercase">Cleanliness</p>
-            <p class="text-sm">100% Hygenic</p>
-        </div>
-        <div class="bg-white p-4 rounded-xl shadow-sm border border-orange-100 text-center">
-            <i class="fas fa-clock text-orange-500 text-2xl mb-2"></i>
-            <p class="text-xs font-bold uppercase">Check-in</p>
-            <p class="text-sm">24 Hours</p>
+        <div class="bg-white p-6 rounded-2xl shadow-md text-center border-t-4 border-orange-500">
+            <i class="fas fa-shield-alt text-3xl text-orange-500 mb-3"></i>
+            <h3 class="font-bold text-xl">Surakshit Stay</h3>
+            <p class="text-gray-600">CCTV aur 24/7 guard ki suvidha.</p>
         </div>
     </section>
 
-    <section class="py-12 px-6 max-w-4xl mx-auto">
-        <h3 class="text-2xl font-bold text-center mb-8">Hume Kyun Chunein?</h3>
-        <ul class="space-y-4">
-            <li class="flex items-start bg-white p-4 rounded-lg shadow-sm">
-                <i class="fas fa-star text-yellow-500 mt-1 mr-3"></i>
-                <span>Ghar jaisa mahol aur surakshit vatavaran.</span>
-            </li>
-            <li class="flex items-start bg-white p-4 rounded-lg shadow-sm">
-                <i class="fas fa-star text-yellow-500 mt-1 mr-3"></i>
-                <span>Parivaar (Families) ke liye bade aur saaf kamre.</span>
-            </li>
-            <li class="flex items-start bg-white p-4 rounded-lg shadow-sm">
-                <i class="fas fa-star text-yellow-500 mt-1 mr-3"></i>
-                <span>Station aur Bus Stand se asaan pahunch.</span>
-            </li>
-        </ul>
-    </section>
-
-    <footer class="bg-gray-900 text-white py-12 px-6 text-center">
-        <h4 class="text-xl font-bold mb-4">Aaj hi apni jagah surakshit karein!</h4>
-        <div class="flex flex-col gap-4 max-w-xs mx-auto">
-            <a href="https://wa.me/91YOURNUMBER" class="bg-green-600 p-3 rounded-lg font-bold flex items-center justify-center">
-                <i class="fab fa-whatsapp mr-2"></i> WhatsApp Booking
-            </a>
-            <a href="tel:YOURNUMBER" class="bg-orange-600 p-3 rounded-lg font-bold flex items-center justify-center">
-                <i class="fas fa-phone-alt mr-2"></i> Call Manager
-            </a>
+    <div id="bookingModal" class="modal flex items-center justify-center">
+        <div class="bg-white p-8 rounded-3xl w-full max-w-md m-4 relative">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-2xl text-gray-400">&times;</button>
+            <h3 class="text-2xl font-bold mb-6 text-orange-600 text-center">Booking Enquiry</h3>
+            <div class="space-y-4">
+                <input type="text" id="custName" placeholder="Aapka Naam" class="w-full p-3 border rounded-xl outline-orange-500">
+                <input type="date" id="bookDate" class="w-full p-3 border rounded-xl outline-orange-500">
+                <button onclick="sendToWhatsapp()" class="w-full saffron-btn text-white py-4 rounded-xl font-bold text-lg">Confirm via WhatsApp</button>
+            </div>
         </div>
-        <p class="mt-10 text-xs text-gray-500">© 2026 Shree Ram Guest House Ayodhya | Digital Partner: Ayodhya Digital Labs</p>
+    </div>
+
+    <footer class="bg-gray-900 text-white py-12 text-center">
+        <p class="text-orange-500 font-bold mb-2">Jai Shree Ram</p>
+        <p class="text-sm opacity-50 italic">Site Created by: Satyam8009 (Ayodhya Digital Labs)</p>
     </footer>
 
+    <script>
+        function openModal() { document.getElementById('bookingModal').style.display = 'flex'; }
+        function closeModal() { document.getElementById('bookingModal').style.display = 'none'; }
+
+        function sendToWhatsapp() {
+            const name = document.getElementById('custName').value;
+            const date = document.getElementById('bookDate').value;
+            const myNumber = "91YOURNUMBER"; // <-- Apna number yahan dalo
+
+            if(!name || !date) {
+                alert("Kripya Naam aur Date bharein");
+                return;
+            }
+
+            const msg = `Namaste! Mera naam *${name}* hai aur main *${date}* ko Shree Ram Guest House mein stay ke liye enquiry karna chahta hoon.`;
+            window.open(`https://wa.me/${myNumber}?text=${encodeURIComponent(msg)}`, '_blank');
+        }
+    </script>
 </body>
 </html>
